@@ -1,0 +1,1 @@
+const {reply}=require('./_common');module.exports=(req,res)=>{if(req.method!=='GET')return reply(res,405,{error:'Metodo non consentito'});reply(res,200,{url:process.env.SUPABASE_URL||'',anonKey:process.env.SUPABASE_ANON_KEY||''})};
